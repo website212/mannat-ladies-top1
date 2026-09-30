@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Mannat Ladies Top | Beed</title>
+<meta name="description" content="Mannat Ladies Top - Trending ladies fashion, party wear, tops, jeans, sarees and stylish outfits in Beed.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#fffafc;color:#351c2b;line-height:1.6
+}
+:root{
+--pink:#d83b7d;--rose:#f58caf;--purple:#7654c8;
+--gold:#c89b3c;--cream:#fff7ed;--text:#351c2b
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.top{
+background:linear-gradient(90deg,#8e3d9e,#d83b7d,#ee7196);
+color:white;text-align:center;padding:8px;font-size:13px
+}
+
+nav{
+position:sticky;top:0;z-index:100;
+background:rgba(255,255,255,.96);
+box-shadow:0 3px 18px #00000012;
+display:flex;align-items:center;justify-content:space-between;
+padding:12px 6%
+}
+.logo{
+display:flex;align-items:center;gap:10px;font-weight:800;
+font-size:20px;color:var(--pink)
+}
+.logo-circle{
+width:44px;height:44px;border-radius:50%;
+background:linear-gradient(135deg,#d83b7d,#8e3d9e,#f3b95f);
+display:grid;place-items:center;color:white;font-size:20px;
+box-shadow:0 5px 15px #d83b7d40
+}
+.navlinks{display:flex;gap:22px;align-items:center}
+.navlinks a{font-weight:600;font-size:14px}
+.navlinks a:hover{color:var(--pink)}
+.menu{display:none;font-size:26px;cursor:pointer}
+
+.hero{
+min-height:620px;
+display:grid;place-items:center;text-align:center;
+padding:70px 7%;
+background:
+radial-gradient(circle at 10% 20%,#ffd6e5 0,transparent 30%),
+radial-gradient(circle at 90% 20%,#e4d7ff 0,transparent 28%),
+linear-gradient(135deg,#fff9f4,#fff1f7,#f6f0ff);
+position:relative;overflow:hidden
+}
+.hero:after{
+content:"";position:absolute;width:280px;height:280px;
+border-radius:50%;background:#f4c7d955;right:-100px;bottom:-100px
+}
+.hero-content{max-width:850px;position:relative;z-index:2}
+.badge{
+display:inline-block;padding:8px 18px;border-radius:30px;
+background:white;color:var(--pink);font-weight:700;
+box-shadow:0 8px 25px #0000000d;margin-bottom:20px
+}
+.hero h1{
+font-size:clamp(42px,8vw,82px);line-height:1.02;
+background:linear-gradient(90deg,#b92f69,#7b48b4,#c28a30);
+-webkit-background-clip:text;color:transparent;
+margin-bottom:18px
+}
+.hero p{font-size:18px;max-width:650px;margin:auto;color:#694957}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+padding:13px 22px;border-radius:30px;font-weight:700;
+display:inline-block;transition:.3s
+}
+.btn:hover{transform:translateY(-3px)}
+.primary{background:linear-gradient(90deg,#d83b7d,#9b4cc0);color:white}
+.secondary{background:white;color:var(--pink);border:1px solid #f1c4d7}
+
+section{padding:75px 6%;max-width:1400px;margin:auto}
+.heading{text-align:center;margin-bottom:38px}
+.heading span{color:var(--pink);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:2px}
+.heading h2{font-size:38px;margin:5px 0}
+.heading p{color:#806775}
+
+.categories{
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px
+}
+.card{
+background:white;border-radius:22px;overflow:hidden;
+box-shadow:0 10px 30px #6b34551a;transition:.35s
+}
+.card:hover{transform:translateY(-8px)}
+.pic{
+height:250px;background:linear-gradient(135deg,#ffd9e7,#e7d9ff);
+position:relative;display:grid;place-items:center;
+overflow:hidden
+}
+.pic img{width:100%;height:100%;object-fit:cover}
+.placeholder{
+position:absolute;text-align:center;font-size:20px;font-weight:800;
+color:#9b5471;padding:15px
+}
+.card-body{padding:18px}
+.card-body h3{font-size:20px}
+.card-body p{font-size:14px;color:#806775}
+
+.collection{margin-bottom:80px}
+.banner{
+height:260px;border-radius:28px;overflow:hidden;
+position:relative;background:linear-gradient(135deg,#d83b7d,#7654c8);
+display:flex;align-items:end
+}
+.banner img{width:100%;height:100%;object-fit:cover;position:absolute}
+.banner-text{
+position:relative;z-index:2;color:white;padding:30px;
+background:linear-gradient(transparent,#0009);width:100%
+}
+.banner-text h2{font-size:34px}
+.banner-text p{font-size:15px}
+.products{
+display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px
+}
+.product{
+background:white;border-radius:18px;overflow:hidden;
+box-shadow:0 7px 22px #0000000c;transition:.3s
+}
+.product:hover{transform:translateY(-5px)}
+.product .pic{height:280px}
+.product h3{padding:13px 15px 4px;font-size:17px}
+.product p{padding:0 15px 15px;color:#917582;font-size:13px}
+  .info{
+background:linear-gradient(135deg,#fff0f6,#f1ebff);
+border-radius:30px;padding:50px 6%;
+text-align:center
+}
+.info-grid{
+display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px
+}
+.info-box{
+background:white;border-radius:20px;padding:25px;
+box-shadow:0 8px 25px #0000000c
+}
+.info-box .icon{font-size:32px;margin-bottom:8px}
+.info-box h3{margin-bottom:5px}
+
+.reviews{
+display:grid;grid-template-columns:repeat(3,1fr);gap:20px
+}
+.review{
+background:white;padding:25px;border-radius:20px;
+box-shadow:0 8px 25px #0000000d
+}
+.stars{color:#e3a72e;font-size:20px;letter-spacing:2px}
+.review p{margin:12px 0;color:#624c58}
+.review strong{color:#9a4169}
+
+footer{
+background:linear-gradient(135deg,#572c65,#9d3f70);
+color:white;text-align:center;padding:45px 20px
+}
+footer h2{font-size:28px;margin-bottom:8px}
+.social{margin:20px 0}
+.social a{
+display:inline-block;background:white;color:#9d3f70;
+padding:10px 18px;border-radius:25px;font-weight:700
+}
+.copy{font-size:13px;opacity:.8}
+
+.reveal{
+opacity:0;transform:translateY(35px);
+transition:opacity .7s ease,transform .7s ease
+}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:850px){
+.navlinks{
+display:none;position:absolute;top:68px;left:0;width:100%;
+background:white;flex-direction:column;padding:20px;
+box-shadow:0 10px 20px #0002
+}
+.navlinks.open{display:flex}
+.menu{display:block}
+.categories{grid-template-columns:repeat(2,1fr)}
+.products{grid-template-columns:repeat(2,1fr)}
+.reviews{grid-template-columns:1fr}
+.info-grid{grid-template-columns:1fr}
+.hero{min-height:560px;padding:60px 5%}
+}
+
+@media(max-width:520px){
+nav{padding:10px 5%}
+.logo{font-size:16px}
+.logo-circle{width:38px;height:38px}
+.categories{gap:12px}
+.pic{height:190px}
+.products{gap:12px}
+.product .pic{height:230px}
+.banner{height:210px}
+.banner-text{padding:20px}
+.banner-text h2{font-size:27px}
+section{padding:55px 5%}
+.heading h2{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+✨ Trending Fashion • Every Range • Beed
+</div>
+
+<nav>
+<a href="#home" class="logo">
+<span class="logo-circle">M</span>
+<span>MANNAT LADIES TOP</span>
+</a>
+
+<div class="navlinks" id="navlinks">
+<a href="#home">Home</a>
+<a href="#categories">Collections</a>
+<a href="#about">About</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="menu" onclick="toggleMenu()">☰</div>
+</nav>
+
+<header class="hero" id="home">
+<div class="hero-content reveal">
+<div class="badge">MANNAT LADIES TOP • BEED</div>
+<h1>Fashion That Feels Like You.</h1>
+<p>
+Discover trending ladies fashion, stylish tops, jeans, sarees,
+one-piece, two-piece, three-piece and party wear — all in different ranges.
+</p>
+
+<div class="buttons">
+<a class="btn primary" href="tel:9834041020">📞 Call Now</a>
+<a class="btn secondary" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Tuljai+Chowk,+Bhaya+Nagar,+Datta+Nagar,+Beed,+Maharashtra+431122">
+📍 View Location
+</a>
+</div>
+</div>
+</header>
+
+<section id="categories">
+<div class="heading reveal">
+<span>Explore</span>
+<h2>Our Collections</h2>
+<p>Find your next favourite fashion style.</p>
+</div>
+
+<div class="categories">
+
+<a class="card reveal" href="#tops">
+<div class="pic">
+<img src="images/categories/tops.jpg" onerror="this.style.display='none'">
+<div class="placeholder">TOPS</div>
+</div>
+<div class="card-body"><h3>Trending Tops</h3><p>Stylish everyday & trendy tops</p></div>
+</a>
+
+<a class="card reveal" href="#jeans">
+<div class="pic">
+<img src="images/categories/jeans.jpg" onerror="this.style.display='none'">
+<div class="placeholder">JEANS</div>
+</div>
+<div class="card-body"><h3>Jeans & Pants</h3><p>Modern fits & stylish looks</p></div>
+</a>
+
+<a class="card reveal" href="#sarees">
+<div class="pic">
+<img src="images/categories/sarees.jpg" onerror="this.style.display='none'">
+<div class="placeholder">SAREES</div>
+</div>
+<div class="card-body"><h3>Sarees</h3><p>Elegant traditional styles</p></div>
+</a>
+
+<a class="card reveal" href="#onepiece">
+<div class="pic">
+<img src="images/categories/one-piece.jpg" onerror="this.style.display='none'">
+<div class="placeholder">ONE-PIECE</div>
+</div>
+<div class="card-body"><h3>One Piece</h3><p>Chic & modern outfits</p></div>
+</a>
+
+<a class="card reveal" href="#twopiece">
+<div class="pic">
+<img src="images/categories/two-piece.jpg" onerror="this.style.display='none'">
+<div class="placeholder">TWO-PIECE</div>
+</div>
+<div class="card-body"><h3>Two Piece</h3><p>Perfect coordinated looks</p></div>
+</a>
+
+<a class="card reveal" href="#threepiece">
+<div class="pic">
+<img src="images/categories/three-piece.jpg" onerror="this.style.display='none'">
+<div class="placeholder">THREE-PIECE</div>
+</div>
+<div class="card-body"><h3>Three Piece</h3><p>Complete fashionable outfits</p></div>
+</a>
+
+<a class="card reveal" href="#party">
+<div class="pic">
+<img src="images/categories/party-wear.jpg" onerror="this.style.display='none'">
+<div class="placeholder">PARTY WEAR</div>
+</div>
+<div class="card-body"><h3>Party Wear</h3><p>Special looks for special moments</p></div>
+</a>
+
+<a class="card reveal" href="#contact">
+<div class="pic">
+<div class="placeholder">✨ NEW</div>
+</div>
+<div class="card-body"><h3>Latest Arrivals</h3><p>Fresh & trending styles</p></div>
+</a>
+
+</div>
+</section>
+
+<section class="collection reveal" id="tops">
+<div class="banner">
+<img src="images/banners/tops-banner.jpg" onerror="this.style.display='none'">
+<div class="banner-text"><h2>Trending Tops</h2><p>Fresh styles for your everyday fashion.</p></div>
+</div>
+
+<div class="products">
+<div class="product"><div class="pic"><img src="images/products/tops/top-01.jpg" onerror="this.style.display='none'"><div class="placeholder">TOP 01</div></div><h3>Trending Top</h3><p>New Style</p></div>
+<div class="product"><div class="pic"><img src="images/products/tops/top-02.jpg" onerror="this.style.display='none'"><div class="placeholder">TOP 02</div></div><h3>Stylish Top</h3><p>Latest Collection</p></div>
+<div class="product"><div class="pic"><img src="images/products/tops/top-03.jpg" onerror="this.style.display='none'"><div class="placeholder">TOP 03</div></div><h3>Fashion Top</h3><p>Trending Look</p></div>
+<div class="product"><div class="pic"><img src="images/products/tops/top-04.jpg" onerror="this.style.display='none'"><div class="placeholder">TOP 04</div></div><h3>Premium Top</h3><p>New Arrival</p></div>
+</div>
+</section>
+
+<section class="collection reveal" id="jeans">
+<div class="banner">
+<img src="images/banners/jeans-banner.jpg" onerror="this.style.display='none'">
+<div class="banner-text"><h2>Jeans & Pants</h2><p>Modern fits for a confident look.</p></div>
+</div>
+
+<div class="products">
+<div class="product"><div class="pic"><img src="images/products/jeans/jeans-01.jpg" onerror="this.style.display='none'"><div class="placeholder">JEANS 01</div></div><h3>Stylish Jeans</h3><p>Latest Fit</p></div>
+<div class="product"><div class="pic"><img src="images/products/jeans/jeans-02.jpg" onerror="this.style.display='none'"><div class="placeholder">JEANS 02</div></div><h3>Denim Style</h3><p>Trending Collection</p></div>
+<div class="product"><div class="pic"><img src="images/products/jeans/jeans-03.jpg" onerror="this.style.display='none'"><div class="placeholder">JEANS 03</div></div><h3>Fashion Pants</h3><p>New Arrival</p></div>
+<div class="product"><div class="pic"><img src="images/products/jeans/jeans-04.jpg" onerror="this.style.display='none'"><div class="placeholder">JEANS 04</div></div><h3>Casual Denim</h3><p>Modern Look</p></div>
+</div>
+</section>
+
+<section class="collection reveal" id="sarees">
+<div class="banner">
+<img src="images/banners/sarees-banner.jpg" onerror="this.style.display='none'">
+<div class="banner-text"><h2>Elegant Sarees</h2><p>Graceful styles for every occasion.</p></div>
+</div>
+
+<div class="products">
+<div class="product"><div class="pic"><img src="images/products/sarees/saree-01.jpg" onerror="this.style.display='none'"><div class="placeholder">SAREE 01</div></div><h3>Elegant Saree</h3><p>Beautiful Collection</p></div>
+<div class="product"><div class="pic"><img src="images/products/sarees/saree-02.jpg" onerror="this.style.display='none'"><div class="placeholder">SAREE 02</div></div><h3>Designer Saree</h3><p>Latest Style</p></div>
+<div class="product"><div class="pic"><img src="images/products/sarees/saree-03.jpg" onerror="this.style.display='none'"><div class="placeholder">SAREE 03</div></div><h3>Festive Saree</h3><p>Special Collection</p></div>
+<div class="product"><div class="pic"><img src="images/products/sarees/saree-04.jpg" onerror="this.style.display='none'"><div class="placeholder">SAREE 04</div></div><h3>Stylish Saree</h3><p>New Arrival</p></div>
+</div>
+</section>
+<section class="collection reveal" id="onepiece">
+<div class="banner">
+<img src="images/banners/one-piece-banner.jpg" onerror="this.style.display='none'">
+<div class="banner-text"><h2>One Piece</h2><p>Chic outfits for your stylish moments.</p></div>
+</div>
+
+<div class="products">
+<div class="product"><div class="pic"><img src="images/products/one-piece/one-01.jpg" onerror="this.style.display='none'"><div class="placeholder">ONE 01</div></div><h3>Stylish One Piece</h3><p>Trending Look</p></div>
+<div class="product"><div class="pic"><img src="images/products/one-piece/one-02.jpg" onerror="this.style.display='none'"><div class="placeholder">ONE 02</div></div><h3>Party One Piece</h3><p>Latest Collection</p></div>
+<div class="product"><div class="pic"><img src="images/products/one-piece/one-03.jpg" onerror="this.style.display='none'"><div class="placeholder">ONE 03</div></div><h3>Casual One Piece</h3><p>New Style</p></div>
+<div class="product"><div class="pic"><img src="images/products/one-piece/one-04.jpg" onerror="this.style.display='none'"><div class="placeholder">ONE 04</div></div><h3>Premium One Piece</h3><p>Fresh Arrival</p></div>
+</div>
+</section>
+
+<section class="collection reveal" id="twopiece">
+<div class="banner">
+<img src="images/banners/two-piece-banner.jpg" onerror="this.style.display='none'">
+<div class="banner-text"><h2>Two Piece</h2><p>Matching styles made for you.</p></div>
+</div>
+
+<div class="products">
+<div class="product"><div class="pic"><img src="images/products/two-piece/two-01.jpg" onerror="this.style.display='none'"><div class="placeholder">TWO 01</div></div><h3>Two Piece Set</h3><p>Trending Style</p></div>
+<div class="product"><div class="pic"><img src="images/products/two-piece/two-02.jpg" onerror="this.style.display='none'"><div class="placeholder">TWO 02</div></div><h3>Fashion Set</h3><p>Latest Arrival</p></div>
+<div class="product"><div class="pic"><img src="images/products/two-piece/two-03.jpg" onerror="this.style.display='none'"><div class="placeholder">TWO 03</div></div><h3>Casual Set</h3><p>Modern Look</p></div>
+<div class="product"><div class="pic"><img src="images/products/two-piece/two-04.jpg" onerror="this.style.display='none'"><div class="placeholder">TWO 04</div></div><h3>Premium Set</h3><p>New Collection</p></div>
+</div>
+</section>
+
+<section class="collection reveal" id="threepiece">
+<div class="banner">
+<img src="images/banners/three-piece-banner.jpg" onerror="this.style.display='none'">
+<div class="banner-text"><h2>Three Piece</h2><p>Complete looks with elegant details.</p></div>
+</div>
+
+<div class="products">
+<div class="product"><div class="pic"><img src="images/products/three-piece/three-01.jpg" onerror="this.style.display='none'"><div class="placeholder">THREE 01</div></div><h3>Three Piece Set</h3><p>Elegant Style</p></div>
+<div class="product"><div class="pic"><img src="images/products/three-piece/three-02.jpg" onerror="this.style.display='none'"><div class="placeholder">THREE 02</div></div><h3>Designer Set</h3><p>Latest Collection</p></div>
+<div class="product"><div class="pic"><img src="images/products/three-piece/three-03.jpg" onerror="this.style.display='none'"><div class="placeholder">THREE 03</div></div><h3>Festive Set</h3><p>Special Style</p></div>
+<div class="product"><div class="pic"><img src="images/products/three-piece/three-04.jpg" onerror="this.style.display='none'"><div class="placeholder">THREE 04</div></div><h3>Stylish Set</h3><p>New Arrival</p></div>
+</div>
+</section>
+
+<section class="collection reveal" id="party">
+<div class="banner">
+<img src="images/banners/party-wear-banner.jpg" onerror="this.style.display='none'">
+<div class="banner-text"><h2>Party Wear</h2><p>Make every special occasion stylish.</p></div>
+</div>
+
+<div class="products">
+<div class="product"><div class="pic"><img src="images/products/party-wear/party-01.jpg" onerror="this.style.display='none'"><div class="placeholder">PARTY 01</div></div><h3>Party Wear</h3><p>Glamorous Style</p></div>
+<div class="product"><div class="pic"><img src="images/products/party-wear/party-02.jpg" onerror="this.style.display='none'"><div class="placeholder">PARTY 02</div></div><h3>Designer Wear</h3><p>Trending Collection</p></div>
+<div class="product"><div class="pic"><img src="images/products/party-wear/party-03.jpg" onerror="this.style.display='none'"><div class="placeholder">PARTY 03</div></div><h3>Stylish Outfit</h3><p>New Arrival</p></div>
+<div class="product"><div class="pic"><img src="images/products/party-wear/party-04.jpg" onerror="this.style.display='none'"><div class="placeholder">PARTY 04</div></div><h3>Premium Wear</h3><p>Special Collection</p></div>
+</div>
+</section>
+
+<section id="about">
+<div class="info reveal">
+<div class="heading">
+<span>Why Mannat?</span>
+<h2>Fashion For Every Range</h2>
+<p>Discover stylish ladies wear at Mannat Ladies Top, Beed.</p>
+</div>
+
+<div class="info-grid">
+<div class="info-box">
+<div class="icon">👗</div>
+<h3>Every Range</h3>
+<p>Ladies fashion for different styles and budgets.</p>
+</div>
+
+<div class="info-box">
+<div class="icon">✨</div>
+<h3>Trending Styles</h3>
+<p>Fresh and fashionable designs for your wardrobe.</p>
+</div>
+
+<div class="info-box">
+<div class="icon">📍</div>
+<h3>Visit Our Store</h3>
+<p>Behind Civil Hospital, Beed.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="reviews">
+<div class="heading reveal">
+<span>Customer Love</span>
+<h2>What Customers Say</h2>
+</div>
+
+<div class="reviews">
+<div class="review reveal">
+<div class="stars">★★★★★</div>
+<p>“Beautiful collection and lots of stylish options.”</p>
+<strong>— Happy Customer</strong>
+</div>
+
+<div class="review reveal">
+<div class="stars">★★★★★</div>
+<p>“Loved the variety of ladies fashion here.”</p>
+<strong>— Happy Customer</strong>
+</div>
+
+<div class="review reveal">
+<div class="stars">★★★★★</div>
+<p>“Good collection for different occasions.”</p>
+<strong>— Happy Customer</strong>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="info reveal">
+<div class="heading">
+<span>Visit Us</span>
+<h2>Mannat Ladies Top</h2>
+<p>Come and explore our latest ladies fashion collection.</p>
+</div>
+
+<div class="buttons">
+
+<a class="btn primary" href="tel:9834041020">
+📞 9834041020
+</a>
+
+<a class="btn secondary" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Tuljai+Chowk,+Bhaya+Nagar,+Datta+Nagar,+Beed,+Maharashtra+431122">
+📍 Get Directions
+</a>
+
+<a class="btn secondary" target="_blank"
+href="https://www.instagram.com/mannat_fashion_girls_top/">
+📸 Instagram
+</a>
+
+</div>
+
+<p style="margin-top:22px;color:#755968">
+🕘 Open Daily: 9:00 AM – 9:00 PM<br>
+🚚 Home Delivery: Not Available
+</p>
+</div>
+</section>
+
+<footer>
+<h2>MANNAT LADIES TOP</h2>
+<p>Trending Fashion • Stylish Looks • Every Range</p>
+
+<div class="social">
+<a target="_blank" href="https://www.instagram.com/mannat_fashion_girls_top/">
+Follow on Instagram
+</a>
+</div>
+
+<div class="copy">
+© 2026 Mannat Ladies Top • Beed, Maharashtra
+</div>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("navlinks").classList.toggle("open");
+}
+
+document.querySelectorAll(".navlinks a").forEach(function(a){
+a.addEventListener("click",function(){
+document.getElementById("navlinks").classList.remove("open");
+});
+});
+
+const observer=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if(entry.isIntersecting) entry.target.classList.add("show");
+});
+},{threshold:.12});
+
+document.querySelectorAll(".reveal").forEach(function(el){
+observer.observe(el);
+});
+</script>
+
+</body>
+  </html>
